@@ -1,5 +1,6 @@
 version: "3.6"
-
+# sudo docker-compose exec sandbox-hdp /root/start-sandbox-hdp.sh
+# ssh maria_dev@localhost -p 2222
 services:
   sandbox-hdp:
     image: hortonworks/sandbox-hdp-standalone:2.6.4
@@ -53,7 +54,7 @@ services:
       - 2100:2100
       - 2181:2181
       - 2201:2201
-      - 2222:2222
+      - "2222:22"
       - 3000:3000
       - 4242:4242
       - 5007:5007
